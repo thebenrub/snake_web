@@ -1,0 +1,12 @@
+body{
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(187, 11, 231);
+}
+#H1{
+    color: rgba(53, 29, 29, 0.979);
+}
+
+.header{
+    color: rgb(38, 35, 218);
+}
