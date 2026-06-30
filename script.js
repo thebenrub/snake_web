@@ -16,6 +16,8 @@ function createBoard() {
     }
 }
 createBoard();
+startGame();
+generateApple();
 
 function startGame() {
 
