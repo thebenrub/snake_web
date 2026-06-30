@@ -1,5 +1,5 @@
 body {
-    background-color: #f0fdf4;
+    background-color: #23bb51;
     color: #166534;
     font-family: sans-serif;
     display: flex;
@@ -10,7 +10,7 @@ body {
 }
 
 .game-container {
-    background: white;
+    background: rgb(182, 18, 18);
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.1);
@@ -22,11 +22,11 @@ body {
     width: 300px;
     height: 300px;
     margin: 20px auto;
-    background: #f8fafc;
+    background: black;
     border: 4px solid #bbf7d0;
 }
 
-#grid div { border: 0.1px solid #f1f5f9; }
+#grid div { border: 0.1px solid green; }
 
 .snake { background-color: #22c55e; border-radius: 2px;}
 .apple { background-color: #ef4444; border-radius: 50%}
