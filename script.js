@@ -33,3 +33,26 @@ function move() {
     const hitLeft = (currentSnake[0] % 20 === 0 && direction == -1);
     const hitSelf = squares[currentSnake[0] + direction]?.classList.contains('snake');
 }
+
+function generateApple() {
+    do {
+        appleIndex = Math.floor(Math.random() * squares.length);
+    } while (squares[appleIndex].classList.contains('snake'));
+    squares[appleIndex].classList.add('apple');
+}
+
+
+function changeDir(newDir) {
+
+    if (direction + newDir) {
+        direction = newDir
+    }
+}
+
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowUp') changeDir(-20);
+    if (e.key === 'ArrowDown') changeDir(20);
+    if (e.key === 'ArrowLeft') changeDir(1);
+    if (e.key === 'ArrowRight') changeDir(-1);
+})
