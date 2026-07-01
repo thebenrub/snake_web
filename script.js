@@ -79,6 +79,38 @@ function changeDir(newDir) {
 }
 
 
+document.addEventListener('touchend', e => {
+    touchEndX = e.changedTouches[0].screenX;
+    touchEndY = e.changedTouches[0].screenY;
+    handleSwipe();
+}, false)
+
+
+
+
+function handleSwipe() {
+    const dx = touchEndX - touchEndX;
+    const dy = touchEndY - touchEndY;
+
+
+    const absDx = Math.abs(dx);
+    const absDy = Math.abs(dy);
+
+    if (Math.max(absDx, absDx) > 30) {
+        if (absDx > absDy) {
+
+
+            if (dx > 0) changeDir(-1);
+            else changeDir(1);
+        } else {
+            
+            if (dy > 0) changeDir(20);
+            else changeDir(-20);
+        }
+    }
+}
+    
+
 document.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowUp') changeDir(-20);
     if (e.key === 'ArrowDown') changeDir(20);
