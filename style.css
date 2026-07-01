@@ -1,5 +1,5 @@
 body {
-    background-color: #cc7e17;
+    background-color: #55db17;
     color: #166534;
     font-family: sans-serif;
     display: flex;
@@ -10,7 +10,7 @@ body {
 }
 
 .game-container {
-    background: rgb(182, 18, 18);
+    background: rgb(36, 189, 23);
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.1);
