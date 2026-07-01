@@ -16,8 +16,6 @@ function createBoard() {
     }
 }
 createBoard();
-startGame();
-generateApple();
 
 function startGame() {
 
@@ -29,6 +27,7 @@ function startGame() {
     scoreDisplay.textContent = score;
     currentSnake.forEach(index => squares[index].classList.add('snake'));
     timerId = setInterval(move, intervalTime);
+    generateApple();
 }
 
 
@@ -117,5 +116,3 @@ document.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowLeft') changeDir(1);
     if (e.key === 'ArrowRight') changeDir(-1);
 })
-
-setInterval(move, 200);
