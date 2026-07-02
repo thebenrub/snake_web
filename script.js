@@ -11,7 +11,6 @@ const eat_apple=new Audio('assets/eat.mp3');
 const game_over=new Audio('assets/go.mp3');
 function backGMusic() {
     bgm.play();
-    bgm.loop();
 }
 function eating() {
     eat_apple.currentTime = 0;
