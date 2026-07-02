@@ -6,6 +6,22 @@ let direction = 1;
 let appleIndex = 0;
 let timerId = 20;
 let intervalTime = 200;
+const bgm=new Audio('assets/b.mp3');
+const eat_apple=new Audio('assets/eat.mp3');
+const game_over=new Audio('assets/go.mp3');
+function backGMusic() {
+    bgm.play();
+    bgm.loop();
+}
+function eating() {
+    eat_apple.currentTime = 0;
+    eat_apple.play();
+}
+function dead() {
+    bgm.pause();
+    bgm.currentTime = 0;
+    game_over.play();
+}
 
 
 function createBoard() {
@@ -18,7 +34,7 @@ function createBoard() {
 createBoard();
 
 function startGame() {
-
+    backGMusic();
     currentSnake.forEach(index => squares[index].classList.remove('snake'));
     squares[appleIndex].classList.remove('apple');
     clearInterval(timerId);
@@ -50,6 +66,7 @@ function move() {
   
 
     if (squares[newHead].classList.contains('apple')) {
+        eating();
         squares[newHead].classList.remove('apple');
         squares[tail].classList.add('snake');
         currentSnake.push(tail);
@@ -59,6 +76,7 @@ function move() {
    
 }
 function endGame(){
+    dead();
     return clearInterval(timerId);
 }
 
@@ -116,3 +134,4 @@ document.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowLeft') changeDir(1);
     if (e.key === 'ArrowRight') changeDir(-1);
 })
+
